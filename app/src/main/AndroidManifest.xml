@@ -161,22 +161,6 @@
                 android:resource="@xml/appwidgetprovider"/>
         </receiver>
 
-        <service
-            android:name=".Service.FCMInstanceService"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
-            </intent-filter>
-        </service>
-
-        <service
-            android:name=".Service.FCMMessageInstanceService"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
-            </intent-filter>
-        </service>
-
         <service android:name=".Widgets.WidgetIntentService">
             <meta-data
                 android:name="android.appwidget.provider"
@@ -413,12 +397,6 @@
             android:configChanges="orientation|screenSize"
             android:label="@string/welcome_title_activity_welcome"/>
 
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="@string/googleapikey"/>
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version"/>
         <meta-data
             android:name="com.google.android.gms.vision.DEPENDENCIES"
             android:value="barcode"/>
